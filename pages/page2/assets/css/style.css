@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0B2DCD;
+    color: white;
+    animation: fadeIn 1s ease-out;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo img {
+    max-height: 70px;
+    padding-left: 1rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu-icon {
+    width: 30px;
+    height: auto;
+    padding-right: 5rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sidebar Navigation */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden off-screen */
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background-color: #333;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease;
+    z-index: 1000;
+    color: white;
+}
+
+.nav-menu.open {
+    right: 0;
+}
+
+.nav-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-menu .close-btn:hover {
+    background-color: #d32f2f;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 20px 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+/* Portfolio Layout */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* Category Styling */
+.category {
+  width: 30%;
+  margin-bottom: 40px;
+}
+
+.category h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Items Grid */
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.item img, .item video {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.item img:hover, .item video:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  filter: brightness(1.1); /* Brighten on hover */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .portfolio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category {
+    width: 80%; /* Allow categories to take up more space on smaller screens */
+  }
+
+  .nav-menu {
+    width: 100%; /* Full width for mobile */
+    max-width: none;
+  }
+
+  .nav-menu ul {
+    padding: 40px 20px;
+  }
+
+  .items {
+    grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+  }
+}
+
+/* Larger Screens */
+@media (min-width: 1024px) {
+  .category {
+    width: 22%; /* Adjust category width for larger screens */
+  }
+}

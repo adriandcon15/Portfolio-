@@ -1,0 +1,179 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0B2DCD;
+    color: white;
+    animation: fadeIn 1s ease-out;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo img {
+    max-height: 70px;
+    padding-left: 1rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu-icon {
+    width: 30px;
+    height: auto;
+    padding-right: 5rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sidebar Navigation */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden off-screen */
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background-color: #333;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease;
+    z-index: 1000;
+    color: white;
+}
+
+.nav-menu.open {
+    right: 0;
+}
+
+.nav-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-menu .close-btn:hover {
+    background-color: #d32f2f;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 20px 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+/* About Section */
+.about {
+    background-color: #f4f4f4;
+    padding: 80px 20px 40px; /* Adjust padding to create space below the fixed header */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    color: #0B2DCD;
+}
+
+.about h3 {
+    font-size: 1.8em;
+    color: #0B2DCD;
+    margin-top: 20px;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.about .skills-list {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align skills to the left */
+    width: 100%;
+}
+
+.about .skill {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items horizontally */
+    margin-bottom: 15px;
+    width: 100%; /* Ensure it takes full width */
+}
+
+.about .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px; /* Increased space for better layout */
+}
+
+.about .bar {
+    background-color: #0B2DCD;
+    color: white;
+    height: 40px; /* Define the height of the bar */
+    border-radius: 5px;
+    font-weight: bold;
+    width: 0; /* Starts with no width */
+    transition: width 1s;
+    text-align: center;
+    font-size: 1em;
+    max-width: 100%; /* Ensures the bar doesn't exceed container's width */
+}

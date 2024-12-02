@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0B2DCD;
+    color: white;
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+.logo img {
+    max-height: 70px;
+    padding-left: 1rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo */
+    filter: brightness(1.2); /* Brighten the logo */
+}
+
+.menu-icon {
+    width: 30px;
+    height: auto;
+    padding-right: 1.5rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo */
+    filter: brightness(1.2); /* Brighten the logo */
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sidebar Navigation */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden off-screen */
+    width: 80%; /* Adjust for mobile screens */
+    max-width: 300px;
+    height: 100%;
+    background-color: #333;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease; /* Animation for sliding in */
+    z-index: 1000;
+    color: white;
+}
+
+.nav-menu.open {
+    right: 0; /* Slide into view */
+}
+
+.nav-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-menu .close-btn:hover {
+    background-color: #d32f2f;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 20px 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on mobile */
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust height based on header size */
+    padding: 20px; /* Add padding for better spacing */
+    padding-top: 80px; /* Add padding-top to avoid overlapping with header */
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff; /* Shadow background */
+    margin-bottom: 0; /* Remove spacing below the image */
+}
+
+.portrait {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto;
+    transition: transform 0.5s ease; /* Smooth hover effect */
+    animation: fadeIn 1.5s ease-out; /* Fade-in for image */
+}
+
+.portrait:hover {
+    transform: translateY(-10px) scale(1.05); /* Slight lift and zoom effect */
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center align text on mobile */
+    text-align: center; /* Center align text on mobile */
+    padding: 20px; /* Reduce padding for better spacing */
+}
+
+.right h1 {
+    font-size: 2.5rem; /* Adjust font size for mobile */
+    margin: 0;
+    animation: fadeIn 1s ease-out; /* Add fade-in animation */
+}
+
+.right p {
+    font-size: 1rem; /* Adjust font size for mobile */
+    margin: 10px 0;
+    animation: fadeIn 1.2s ease-out; /* Delayed fade-in animation */
+}
+
+.view-portfolio-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #0B2DCD;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: fadeIn 1.4s ease-out; /* Delayed fade-in animation */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.view-portfolio-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Slightly enlarge the logo */
+    filter: brightness(1.2); /* Brighten the logo */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (min-width: 601px) {
+    .main-content {
+        flex-direction: row; /* Row layout for larger screens */
+    }
+
+    .left {
+        margin-bottom: 0; /* Remove spacing below the image */
+    }
+
+    .right {
+        align-items: flex-start; /* Align text to the left on larger screens */
+        text-align: left; /* Align text to the left on larger screens */
+        padding: 40px; /* Increase padding for larger screens */
+    }
+
+    .right h1 {
+        font-size: 4rem; /* Increase font size for larger screens */
+    }
+
+    .right p {
+        font-size: 1.3rem; /* Increase font size for larger screens */
+    }
+}
