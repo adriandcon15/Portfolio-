@@ -26,57 +26,56 @@
             <li><a href="../page3/index.html">Contact</a></li>
         </ul>
       </nav>
-      <section class="portfolio">
-        <div class="category">
+      <main>
+        <section class="portfolio-section" id="video-editing">
           <h2>Video Editing</h2>
-          <div class="items">
-            <div class="item">
-              <video controls>
-                <source src="./assets/vids/468788077_8867641323320962_4789811841227836441_n.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="item">
-              <video controls>
-                <source src="./assets/vids/468790812_24049664041336822_7601368097872378371_n.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="item">
-              <video controls>
-                <source src="./assets/vids/468884627_9635563726459937_5055337530438439091_n.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-        <div class="category">
-            <h2>Posters</h2>
-            <div class="items">
-              <div class="item"><img src="./assets/img/CONCEPCION_LE8 copy.jpg" alt="Poster 1"></div>
-              <div class="item"><img src="./assets/img/Pizza Poster Final copy.jpg" alt="Poster 2"></div>
-              <div class="item"><img src="./assets/img/milktea poster.jpg" alt="Poster 3"></div>
-            </div>
-          </div>
-      
-          <div class="category">
-            <h2>Digital Arts</h2>
-            <div class="items">
-              <div class="item"><img src="./assets/img/TSA 4 CONCEPCION WHIMISCALJPG.jpg" alt="Digital Art 1"></div>
-              <div class="item"><img src="./assets/img/Poster.jpg" alt="Digital Art 2"></div>
-              <div class="item"><img src="./assets/img/paint poster.jpg" alt="Digital Art 3"></div>
-            </div>
-          </div>
-      
-          <div class="category">
-            <h2>3D Arts</h2>
-            <div class="items">
-              <div class="item"><img src="./assets/img/rendered(3).jpg" alt="3D Art 1"></div>
-              <div class="item"><img src="./assets/img/TSA2 environment.jpg" alt="3D Art 2"></div>
-              <div class="item"><img src="./assets/img/tsa 2 recording.jpg" alt="3D Art 3"></div>
-            </div>
+          <div class="portfolio-row">
+            <video onclick="openMedia(this)" controls>
+              <source src="./assets/vids/468788077_8867641323320962_4789811841227836441_n.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video onclick="openMedia(this)" controls>
+              <source src="./assets/vids/468790812_24049664041336822_7601368097872378371_n.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video onclick="openMedia(this)" controls>
+              <source src="./assets/vids/468884627_9635563726459937_5055337530438439091_n.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </section>
+      
+        <section class="portfolio-section" id="graphic-design">
+          <h2>Graphic Design</h2>
+          <div class="portfolio-row">
+            <img onclick="openMedia(this)" src="./assets/img/milktea poster.jpg" alt="Graphic Design 1">
+            <img onclick="openMedia(this)" src="./assets/img/CONCEPCION_LE8 copy.jpg" alt="Graphic Design 2">
+            <img onclick="openMedia(this)" src="./assets/img/Pizza Poster Final copy.jpg" alt="Graphic Design 3">
+          </div>
+        </section>
+      
+        <section class="portfolio-section" id="photography">
+          <h2>Photography</h2>
+          <div class="portfolio-row">
+            <img onclick="openMedia(this)" src="./assets/img/IMG_1729.jpg" alt="Photography 1">
+            <img onclick="openMedia(this)" src="./assets/img/IMG_2356.JPG" alt="Photography 2">
+            <img onclick="openMedia(this)" src="./assets/img/IMG_2443.JPG" alt="Photography 3">
+            <img onclick="openMedia(this)" src="./assets/img/IMG_0738 copy-2.jpg" alt="Photography 4">
+            <img onclick="openMedia(this)" src="./assets/img/IMG_0735-2.JPG" alt="Photography 5">
+            <img onclick="openMedia(this)" src="./assets/img/IMG_0736.jpg" alt="Photography 6">
+          </div>
+        </section>
+        <section class="portfolio-section" id="3d-arts">
+          <h2>3d Arts</h2>
+          <div class="portfolio-row">
+            <img onclick="openMedia(this)" src="./assets/img/rendered(3).jpg" alt="Graphic Design 1">
+            <img onclick="openMedia(this)" src="./assets/img/TSA2 environment.jpg" alt="Graphic Design 2">
+            <img onclick="openMedia(this)" src="./assets/img/tsa 2 recording.jpg" alt="Graphic Design 3">
+          </div>
+        </section>
+      </main>
+      
+      
   <script src="./assets/js/scripts.js"></script>
 </body>
 </html>
